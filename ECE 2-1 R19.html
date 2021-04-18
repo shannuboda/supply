@@ -1,0 +1,208 @@
+<html>
+<head>
+<style>
+body {
+	
+	border:solid 1px;
+	margin:0px;
+	padding:15px; 
+	}
+
+.name
+  {
+      margin:25px;
+      padding:15 25 10px;
+      color:red;
+      
+      text-align:left;
+      margin: 15px 5px;
+  }
+  
+  input[type="text"]
+{
+    font-size:22px;
+}
+
+input[type="checkbox"]
+{
+    zoom: 1.5;
+}
+  .name2
+  {
+		 margin:25px;
+      padding:15 25 10px;
+      color:red;
+      
+      text-align:left;
+      margin: 15px 5px;
+	  }
+.heading {
+    font-size: 40px;
+    color: red;
+    margin: 0;
+  }
+#subjects {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#subjects td, #subjects th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#subjects tr:nth-child(even){background-color: #f2f2f2;}
+
+#subjects tr:hover {background-color: #ddd;}
+
+#subjects th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: RED;
+  color: white;
+}
+
+
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  width: 280px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.heading {
+    font-size: 30px;
+    color: red;
+    margin: 0;
+  }
+  
+  .heading2 {
+    font-size: 40px;
+    color: red;
+    margin: 0;
+  }
+  
+  .heading3 {
+    font-size: 27px;
+    color: blue;
+    margin: 0;
+  }
+  
+</style>
+
+</head>
+<body>
+<img src="svck.jpg" width="100" height="100">
+<img align="right" src="logo.jpg" width="100" height="100">
+<hr color="red"></hr>
+<h1 align="center"> <font face="Cambria" size="12" color="blue" >SVCK SUPPLY APPLICATION FORM </font></h1>
+<hr color="blue"></hr>
+
+<h1 align="center"> <font face="Times New Roman" size="12" color="#FA02BB" >SECOND YEAR FIRST SEMESTER </font></h1>
+<hr color="pink"></hr>
+
+<h1 align="left"> <font color="#0000ff">REGULATION : </font><u>R19</u> </h1><hr color="blue"/>
+<table>
+<form>
+<td><p class="heading">ROLL NUMBER</p></td><td/>
+<td><input type ="text" name="RollNum" class="name" placeholder="ENTER STUDENT ROLL NUMBER" required></td><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/>
+<td><p class="heading">FULL NAME</p></td>
+ <td><input type ="text" name="RollNum" class="name2" placeholder="ENTER STUDENT NAME" required></td>
+</form>
+</table>
+<hr color="red"/>
+<h2> ELECTRONICS AND COMMUNICATION ENGINEERING</h2>
+<hr color="#FA02BB"/>
+<table id="subjects">
+  <tr>
+    <th>SUBJECT CODE</th>
+    <th>SUBJECT</th>
+    <th>select</th>
+  </tr>
+  <tr>
+    <td><p><b>19A54302</b></p></td>
+    <td><p><b>Complex Variables and Transforms </b></p></td>
+    <td> <input type="checkbox"></td>
+  </tr>
+   <tr>
+    <td> <b>19A04301</b></td>
+    <td><b>Signals & Systems</b></td>
+    <td> <input type="checkbox"> </td>
+  </tr>
+  <tr>
+    <td> <b>19A04302T</b></td>
+    <td><b>Electronic Devices and Circuits</b></td>
+    <td> <input type="checkbox"> </td>
+  </tr>
+  <tr>
+    <td> <b>19A04303</b></td>
+    <td><b>Probability Theory and Stochastic Processes </b></td>
+    <td> <input type="checkbox"> </td>
+  </tr>
+  
+   <tr>
+    <td> <b>19A04304</b></td>
+    <td><b>Digital Electronics and Logic Design</b></td>
+    <td> <input type="checkbox"> </td>
+  </tr>
+  
+   <tr>
+    <td> <b>19A02304T</b></td>
+    <td><b>Electrical Technology </b></td>
+    <td> <input type="checkbox"> </td>
+  </tr>
+  
+  
+  <tr>
+  <td> <label class="w3-text-green"><b>TOTAL APPLIED SUBJECTS </b></label><td>
+	<td>
+    <form name="frm-pin" method="post" action="pin-index-a.php">
+        <input type="hidden" name="mode" value="PinRequest" />
+        <select name="tot_pin_requested" onchange="calculateAmount(this.value)" required>
+			<option value="" disabled selected>Choose your option</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			
+		</select>
+		</td>
+		<tr>
+        <td><b>Total Amount</b></td>
+        <td><input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="text" readonly></td>
+        <script>
+            function calculateAmount(val) {
+                var tot_price = val * 150;
+                /*display the result*/
+                var divobj = document.getElementById('tot_amount');
+                divobj.value = tot_price;
+            }
+        </script>
+		</tr>
+		</table><br/><br/>
+	 <h2 align="right"><sup> EXAM SECTION SIGNATURE</sup></h2>
+		
+	 <button onclick="window.print()" class="button"> PRINT PAGE</button>
+	 <hr color="red"></hr>
+	<h2 align="right"><font color="#ff00ff"> DESIGNED BY :</font></h2>
+	<h2 align="right"> <font color="#ff0000">B.S.SUBRAMANI, II CSE, SVCK </font></h2>
+
+
+</body>
+</html>
